@@ -2,6 +2,8 @@
     font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -20,11 +22,9 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    list-style: none;
 }
 
-a {
-    text-decoration: none;
+.link > li > a {
     color: #FFFF;
     margin-right: 1rem;
 }
@@ -36,28 +36,28 @@ a {
     margin: 6px;
 }
 
+/* index */
 .begin {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-.begin > div:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    padding: 60px;
+    background: linear-gradient(to bottom right, rgb(39, 174, 96), rgb(44, 62, 80));
+    color: #F2F2F2;
 }
 
 .row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 3rem;
     margin-top: 50px;
-    background-color: #BDC3C7;
     margin: 0;
     border-radius: 5px;
+    padding: 15px;
+    border-radius: 14px;
 }
 
 .box {
@@ -70,7 +70,7 @@ a {
     height: 250px;
     color: #F2F2F2;
     border-radius: 50%;
-    padding: 20px;
+    padding: 15px;
 }
 
 .box-red {
@@ -84,3 +84,75 @@ a {
 .box-green {
     background-color: #3CB371;
 }
+
+/* autores */
+.autor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px;
+}
+.person {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.foto {
+    height: 300px;
+    border-radius: 16px;
+}
+
+
+button {
+    height: 50px;
+    width: 130px;
+    border-radius:7px;
+    background-color: #2C3E50;
+    border: none;
+    margin-top: 20px;
+    color: #FFFF;
+}
+
+.btn-linkedin {
+    background-color: blue;
+    padding: 16px;
+    padding-right: 40px;
+    padding-left: 30px;
+    border-radius:7px;
+    border: none;
+    margin-top: 20px;
+    color: #FFFF;
+}
+
+.btn-linkedin > img {
+    position: relative;
+    top: 14px;
+    height: 45px;
+}
+
+.btn-git {
+    background-color: black;
+    padding: 16px;
+    padding-right: 40px;
+    padding-left: 30px;
+    border-radius:7px;
+    border: none;
+    margin-top: 20px;
+    color: #FFFF;
+}
+
+.btn-git > img {
+    position: relative;
+    top: 14px;
+    height: 45px;
+}
+
+@media (max-width: 768px) {
+  .autor {
+    grid-template-columns: 1fr;
+    margin-left: 20%;
+  }
+}
+
