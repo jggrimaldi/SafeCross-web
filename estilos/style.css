@@ -40,11 +40,18 @@ nav {
     margin: 6px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #FFFF;
+}
+
 /* ===================== */
 /*        HOME           */
 /* ===================== */
 
-.begin {
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,11 +193,14 @@ button {
     height: 45px;
 }
 
-/*     SOBRE     */
+/* ===================== */
+/*        MATERIAIS      */
+/* ===================== */
 #tabela {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 table {
@@ -200,6 +210,10 @@ table {
     font-size: 1rem;
     text-align: left;
     text-align: center;
+}
+
+#tabela > h3{
+    margin-top: 12px;
 }
 
 th, td {
@@ -216,28 +230,20 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-body > h1 {
-    color: #2c3e50;
-}
-
-#passo {
+.material-esquema {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background: #f9f9f9;
-    font-size: 17px;
+    background: linear-gradient(to bottom right, #e9f9f1, #dbefea);
 }
 
-#passo > div {
-    padding: 20px;
-    border-radius: 10px;
+.material-esquema > div > h3 {
+    text-align: center;
+    margin-top: 19px;
 }
 
-ol{
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-
+.material-esquema > div > table {
+    align-self: center;
+    justify-self: center;
 }
 
 .container-esquema {
@@ -245,21 +251,95 @@ ol{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 12px;
+    padding-bottom: 12px;
 }
 
 .esquema {
-    width: 45%;
+    max-width: 100%;
+    height: 500px;
 }
 
-.codigo {
+/* ===================== */
+/*         SOBRE         */
+/* ===================== */
+#passo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #F2F2F2;
+    gap: 32px; 
+    align-items: start; 
+}
+
+#passo > div {
+    padding: 20px;
+    border-radius: 10px;
+}
+.codigo {
+    align-self: center;
+    width: 50%;
+}
+
+.codigo > h2 {
+    text-align: center;
+    margin-top: 12px;
 }
 
 .code-text {
     margin-left: 8px;
     margin-bottom: 8px;
+}
+
+
+.title-block > ol {
+    margin-top: 12px;
+}
+
+.container-problema {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+}
+
+.box-problema {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.box-problema > h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box-problema > ul {
+    padding-left: 20px;
+}
+
+.box-problema > ul > li {
+    margin-top: 7px;
+}
+
+.row-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 50px;
+    margin: 0;
+    border-radius: 14px;
+    background: linear-gradient(to bottom right, #e9f9f1, #dbefea);
+    padding: 60px 20px;
+}
+
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .btn-yt{
@@ -307,6 +387,32 @@ ol{
 
 
 @media (max-width: 768px) {
+    .link {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        flex-direction: column;
+        position: absolute;
+        top: 92px;
+        right: 0;
+        width: 100vw;
+        height: auto;
+        padding: 2rem;
+        background-color: #2C3E50;
+        z-index: 1000;
+    }
+
+    .link.active {
+        max-height: 500px; /* o suficiente para conter os itens */
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-right: 10px;
+    }
+
     .row {
         flex-direction: column;
     }
@@ -314,6 +420,10 @@ ol{
     .autor {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .material-esquema {
+        grid-template-columns: 1fr;
     }
 
     .person {
@@ -324,6 +434,7 @@ ol{
     #passo {
         grid-template-columns: 1fr;
     }
+
 
     .codigo {
         grid-template-columns: auto;

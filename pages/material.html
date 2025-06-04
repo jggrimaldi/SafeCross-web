@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeCross</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image.png" href="https://sdmntprwestus3.oaiusercontent.com/files/00000000-15f8-61fd-85d7-bba762124560/raw?se=2025-05-28T19%3A22%3A25Z&sp=r&sv=2024-08-04&sr=b&scid=e47d05cf-87fb-5a9b-84d8-058d92802f91&skoid=ea1de0bc-0467-43d6-873a-9a5cf0a9f835&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-28T12%3A37%3A02Z&ske=2025-05-29T12%3A37%3A02Z&sks=b&skv=2024-08-04&sig=0pjRqbsoS1VaRMGcZBZfP2euLnJssa2yop%2BAS5dSeVU%3D">
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="../imagens/logo SC.png" alt="logo">
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul class="link" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="autores.html">Autores</a></li>
+                <li><a href="material.html">Material</a></li>
+                <li><a href="Sobre.html">Passo a passo</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <img id="logo" src="../imagens/logo SC.png" alt="logo">
+        <h1>Materiais e ferramentas utilizandos para no projeto</h1>
+        <p>com esquema demonstrativo</p>
+    </section>
+
+    <section id="tabela">
+        <h3>MATERIAL</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arduino Uno</td>
+                    <td>Microcontrolador principal do projeto</td>
+                </tr>
+                <tr>
+                    <td>Sensor HC-SR04</td>
+                    <td>Sensor ultrassônico para detectar pedestres</td>
+                </tr>
+                <tr>
+                    <td>LED Verde</td>
+                    <td>Indica que os carros podem passar</td>
+                </tr>
+                                <tr>
+                    <td>LED Amarelo</td>
+                    <td>Indica transição (atenção)</td>
+                </tr>
+                <tr>
+                    <td>LED Vermelho</td>
+                    <td>Indica que os carros devem parar</td>
+                </tr>
+                <tr>
+                    <td>Resistores 220Ω</td>
+                    <td>Limitam a corrente dos LEDs</td>
+                </tr>
+                <tr>
+                    <td>Protoboard</td>
+                    <td>Base para montagem do circuito</td>
+                </tr>
+                <tr>
+                    <td>Jumpers</td>
+                    <td>Cabos para conexão dos componentes</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <section class="material-esquema">
+        <div>
+            <h3>Ferramentas</h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Aplicativo/Ferramenta</th>
+                        <th>Versão</th>
+                        <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Arduino IDE</td>
+                        <td>2.x.x</td>
+                        <td>Programação e envio do código</td>
+                    </tr>
+                    <tr>
+                        <td>TinkerCAD (opcional)</td>
+                        <td>Web-based</td>
+                        <td>Simulação do circuito</td>
+                    </tr>
+                    <tr>
+                        <td>VS Code</td>
+                        <td>Recomendado</td>
+                        <td>Desenvolvimento do site</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container-esquema">
+            <h3>Esquema</h3>
+            <img class="esquema" src="../imagens/Tikercad.jpeg" alt="esquema"> 
+        </div>
+    </section>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
